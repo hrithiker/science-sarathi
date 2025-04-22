@@ -1,0 +1,33 @@
+body {
+    background-color:rgb(79, 86, 94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #dc3545;
+}
+
+p {
+    font-size: 1.25rem;
+    color:rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

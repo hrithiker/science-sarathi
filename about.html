@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Sarathi Website</title>
+
+    <!-- Bootstrap 5 CDN  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome 5 CDN  -->
+    <!-- <link rel="icon" href="/favicon.ico"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            background: url('/images/main/main.png') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #0077ff;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-top: 10px;
+            color: #fff;
+            font-weight: 300;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 80px 15px;
+                min-height: 50vh;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Section Styling */
+        .section-title {
+            color: #ff8000;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ff8000;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .section-padding {
+            padding: 80px 20px;
+        }
+
+        /* Gradient Background */
+        .gradient-bg {
+            background: linear-gradient(to right, #0b94f0, #ff8000);
+            color: white;
+            padding: 60px 20px;
+            border-radius: 0px;
+            /* margin: 50px 10px; */
+        }
+
+        /* List Group Styling */
+        .list-group-item {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .list-group-item:hover {
+            background-color: #ffbf00;
+            color: #fff;
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Image Styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Info Styling */
+        .contact-info i {
+            color: #ff8000;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1st Navbar section -->
+
+    <header class="header container-fluid">
+        <div class="d-flex align-items-center">
+
+            <a href="index.html">
+                <img src="/images/logo science-sarathi.png" alt="Logo" class="logo">
+            </a>
+            <div class="ms-3">
+                <div class="brand-text">Science Sarathi</div>
+                <div class="subtext">A Robotics Innovation Lab</div>
+            </div>
+        </div>
+        <div class="hindi-text">साइंस सारथी</div>
+        <div class="right-logos d-flex">
+            <img src="/images/iso.jpeg" alt="ISO Logo">
+            <img src="/images/skilindia.fd5d47f7ad455afd20cb.png" alt="Skill India">
+            <img src="/images/pmlogo.bb65caecae5170f45820.png" alt="PM Initiative">
+            <img src="/images/msme-logo-png_seeklogo-480293.png" alt="MSME Logo">
+
+        </div>
+    </header>
+
+    <!-- 2nd Navbar Section -->
+    <header id="full_nav2">
+        <div class="header2">
+            <nav class=" navbar navbar-expand-lg">
+                <div class="container  ">
+                    <button aria-controls="navbarSupportedContent8" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-bs-target="#navbarSupportedContent8" data-bs-toggle="collapse"
+                        type="button"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent8">
+                        <ul class="navbar-nav mx-auto my-2 my-lg-0 ">
+                            <li class="nav-item d-flex align-items-center me-4">
+                                <a class="nav-link" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center me-4  ">
+                                <a class="nav-link" href="/about.html">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown d-flex align-items-center me-4">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Our Services
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li><a class="dropdown-item" href="/school.html">School</a></li>
+                                    <li><a class="dropdown-item" href="/college.html">College</a></li>
+                                    <!-- <li><a class="dropdown-item" href="#">Others </a></li> -->
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown  d-flex align-items-center me-4">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Lab Setup
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/images/404-error-page/404.html">Science Lab </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/images/404-error-page/404.html">Robotics lab
+                                        </a></li>
+                                    <li><a class="dropdown-item" href="/images/404-error-page/404.html">STEAM LAB</a>
+                                    </li>
+                                    <!-- <li><a class="dropdown-item" href="#">ATL</a></li> -->
+
+                                </ul>
+                            </li>
+                            <li class="nav-item  d-flex align-items-center me-4 ">
+                                <a class="nav-link" href="/gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center me-4 ">
+                                <a class="nav-link" href="/contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+    <!-- from gpt  -->
+
+
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1>Welcome to Science Sarathi!</h1>
+                <p>Empowering the next generation of innovators through cutting-edge technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS for Styling and Responsiveness
+    <style>
+        .hero-section {
+            background-color: #3D5EA3;
+            color: #ffffff;
+            padding: 100px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+            background-image: linear-gradient(rgba(61, 94, 163, 0.7), rgba(61, 94, 163, 0.7)),
+                url('/images/main/main.png');
+            /* Example Background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: fade-in 0.8s ease-in-out;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            animation: slide-up 0.8s ease-in-out 0.2s;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slide-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+       
+    </style> -->
+
+
+    <!-- About Us Section -->
+    <!-- <section class="section-padding gradient-bg">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p>
+          In the rapidly evolving landscape of education, integrating 21st-century skills like Robotics, STEM, Programming Languages, AI, and Mechatronics has emerged as a transformative force, offering students unique opportunities to develop critical skills that extend beyond the classroom.
+        </p>
+        <p>
+          At Science Sarathi, we are dedicated to transforming education through cutting-edge technologies. Since our beginning, our passion for learning, innovation, and excellence drives everything we do.
+        </p>
+      </div>
+    </section> -->
+
+    <!-- About Us Section -->
+    <!-- About Us Section -->
+    <section class="section-padding gradient-bg">
+        <div class="container">
+            <h2 class="section-title ">About Us</h2>
+            <div class="row g-4 align-items-center">
+                <!-- Left Side - Text Content -->
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div>
+                        <!-- <p style="color: #fff; font-size: 1.1rem; line-height: 1.7;">
+                            In the rapidly evolving landscape of education, integrating 21st-century skills like
+                            Robotics, STEM, Programming Languages, AI, and Mechatronics has emerged as a transformative
+                            force, offering students unique opportunities to develop critical skills that extend beyond
+                            the classroom.
+                        </p>
+                        <p style="color: #fff; font-size: 1.1rem; line-height: 1.7;">
+                            At Science Sarathi, we are dedicated to transforming education through cutting-edge
+                            technologies. Since our beginning, our passion for learning, innovation, and excellence
+                            drives everything we do.
+                        </p> -->
+                        <p style="color: #fff; font-size: 1.1rem; line-height: 1.7;">
+                            At Science Sarathi, we are dedicated to making STEM education accessible, engaging, and
+                            hands-on for students, educators, and enthusiasts. Our mission is to bridge the gap between
+                            theoretical learning and practical application by offering innovative training programs in
+                            Robotics,Data Science,Web-development, Python, IoT, AI, ML, and Embedded Systems. <br>
+
+                            We specialize in: <br>
+                            ✅ Industry-Oriented Training/Internships – Hands-on workshops and internships for school and
+                            college students. <br>
+
+                            ✅ Workshops/Seminars for Educators/Students – Helping teachers/Students enhance their
+                            Studying methodologies with
+                            technology. <br>
+                            ✅ STEM Curriculum Development – Aligned with NCERT, integrating real-world applications in
+                            Science & Mathematics. <br>
+                            ✅ Career Guidance & ICT Training – Empowering students and teachers with
+                            future-ready skills. <br>
+                        </p>
+                        <a href="" class="btn btn-light mt-3 px-4 py-2 rounded-pill shadow-sm">
+                            Learn More <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side - Combined Image -->
+                <div class="col-lg-6 text-center">
+                    <img src="/images/about-2.jpg" alt="About Us Icons" class="img-fluid rounded shadow-lg"
+                        style="max-width: 100%; height: auto; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Our Mission Section -->
+    <section class="section-padding"
+        style="background: linear-gradient(135deg, #3D5EA3 30%, #6A82FB 100%); color: #fff; overflow: hidden;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <i class="fas fa-rocket fa-4x mb-3" style="color: #FFC107; animation: bounce 1.5s infinite;"></i>
+                <h2 class="fw-bold"
+                    style="font-size: 2.5rem; color: #fff; line-height: 1.2; position: relative; display: inline-block;">
+                    Our Mission
+                    <span class="underline"></span>
+                </h2>
+                <p style="font-size: 1.2rem; line-height: 1.8; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                    We aim to empower the next generation of innovators by integrating cutting-edge skills and fostering
+                    creativity, critical thinking, and problem-solving skills.
+                </p>
+            </div>
+
+            <!-- Skills Section - 2x2 Grid with Animations -->
+            <div class="row">
+                <div class="col-md-6 mb-4"
+                    style="opacity: 0; transform: translateY(20px); animation: fade-in 0.8s forwards 0.1s;">
+                    <div class="icon-box d-flex align-items-center">
+                        <i class="fas fa-robot text-warning fa-3x me-3"></i>
+                        <span style="font-size: 1.3rem; font-weight: 500;">Enhancing Scientific Understanding</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4"
+                    style="opacity: 0; transform: translateY(20px); animation: fade-in 0.8s forwards 0.2s;">
+                    <div class="icon-box d-flex align-items-center">
+                        <i class="fas fa-lightbulb text-info fa-3x me-3"></i>
+                        <span style="font-size: 1.3rem; font-weight: 500;">Promoting Reasearch and Inovations </span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4"
+                    style="opacity: 0; transform: translateY(20px); animation: fade-in 0.8s forwards 0.3s;">
+                    <div class="icon-box d-flex align-items-center">
+                        <i class="fas fa-gears text-primary fa-3x me-3"></i>
+                        <span style="font-size: 1.3rem; font-weight: 500;">Supporting Scientific Pursuits </span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4"
+                    style="opacity: 0; transform: translateY(20px); animation: fade-in 0.8s forwards 0.4s;">
+                    <div class="icon-box d-flex align-items-center">
+                        <i class=" fas fa-brain text-danger fa-3x me-3"></i>
+                        <span style="font-size: 1.3rem; font-weight: 500;">To foster Exploration and Hands-on-learning
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us Section -->
+            <div class="text-center mt-5">
+                <h2 class="fw-bold"
+                    style="font-size: 2.5rem; color: #fff; line-height: 1.2; position: relative; display: inline-block;">
+                    Why Choose Us?
+                    <span class="underline"></span>
+                </h2>
+            </div>
+
+
+            <div class="row mt-4 justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Point 1 -->
+                    <div class="icon-box d-flex align-items-start mb-4"
+                        style="opacity: 0; transform: translateY(20px); animation: fade-in 0.8s forwards 0.5s;">
+                        <i class="fas fa-user-shield text-warning fa-3x me-3"></i>
+                        <div>
+                            <span style="font-size: 1.3rem; font-weight: 500;">Team of Experts</span>
+                            <p style="margin: 0; opacity: 0.8;">
+                                From IITs, NITs, and Institutes of National Importance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="icon-box d-flex align-items-start mb-4"
+                        style="opacity: 0; transform: translateY(20px); animation: fade-in 0.8s forwards 0.6s;">
+                        <i class="fas fa-cogs text-info fa-3x me-3"></i>
+                        <div>
+                            <span style="font-size: 1.3rem; font-weight: 500;">Hands-On Experiments</span>
+                            <p style="margin: 0; opacity: 0.8;">
+                                Focus on practical applications rather than just theory.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="icon-box d-flex align-items-start"
+                        style="opacity: 0; transform: translateY(20px); animation: fade-in 0.8s forwards 0.7s;">
+                        <i class="fas fa-award text-danger fa-3x me-3"></i>
+                        <div>
+                            <span style="font-size: 1.3rem; font-weight: 500;">Elevated Learning Experience</span>
+                            <p style="margin: 0; opacity: 0.8;">
+                                Through seamless technological integration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- CSS for Animations -->
+    <style>
+        /* Underline Animation */
+        .underline {
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 3px;
+            background-color: #FFC107;
+            animation: underline-slide 1.2s forwards;
+        }
+
+        /* Icon Box Styling */
+        .icon-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            /* Center icon and text */
+            gap: 10px;
+            /* Space between icon and text */
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        /* Hover Effect (Only for Non-Touch Devices) */
+        @media (hover: hover) {
+            .icon-box:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .icon-box {
+                padding: 12px;
+                gap: 8px;
+                font-size: 14px;
+                /* Adjust font size for smaller screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .icon-box {
+                flex-direction: column;
+                /* Stack icon and text vertically */
+                text-align: center;
+                padding: 10px;
+            }
+        }
+
+        /* Underline Animation */
+        @keyframes underline-slide {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 50px;
+            }
+        }
+
+        /* Fade-in Animation */
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Bounce Animation */
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+    </style>
+
+
+
+    <!-- Contact Section -->
+    <!-- <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <p><i class="fas fa-phone-alt"></i> 8757823159, 6294938013, 9679700590</p>
+                    <p><i class="fas fa-envelope"></i> sciencesarathi1215@gmail.com</p>
+                    <p><i class="fas fa-globe"></i> <a href="http://www.sciencesarathi.com"
+                            target="_blank">www.sciencesarathi.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1st Floor, Tigga Complex, By Pass Road, Alkapuri, Ranchi,
+                        Jharkhand-834002</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="contact.jpg" alt="Contact" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- Get in Touch Section -->
+    <section class="section-padding" style="background-color: #f9f9f9; padding: 60px 0;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bold"
+                            style="font-size: 2.5rem; color: #3D5EA3; position: relative; display: inline-block;">
+                            Get in Touch
+                            <span class="underline"></span>
+                        </h2>
+                        <p style="color: #6c757d; font-size: 1.1rem; margin-top: 10px;">
+                            We’d love to hear from you! Fill out the form below and we’ll get back to you as soon as
+                            possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-md-8 mx-auto">
+                    <form class="contact-form">
+                        <div class="mb-4">
+                            <input type="text" class="form-control rounded-pill shadow-sm" placeholder="Your Name"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" class="form-control rounded-pill shadow-sm" placeholder="Your Email"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="form-control rounded shadow-sm" rows="5" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-custom rounded-pill px-5 py-3 shadow">
+                                Send Message <i class="fas fa-paper-plane ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Details with Icons -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="contact-box d-flex align-items-center">
+                        <i class="fas fa-phone-alt fa-2x text-primary me-3"></i>
+                        <div>
+                            <span style="font-weight: 600;">Phone</span>
+                            <p style="margin: 0; color: #6c757d;">
+                                +91 9717707724, +91 6294938013
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="contact-box d-flex align-items-center">
+                        <i class="fas fa-envelope fa-2x text-danger me-3"></i>
+                        <div>
+                            <span style="font-weight: 600;">Email</span>
+                            <p style="margin: 0; color: #6c757d;"> sciencesarathi1512@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="contact-box d-flex align-items-center">
+                        <i class="fas fa-map-marker-alt fa-2x text-success me-3"></i>
+                        <div>
+                            <span style="font-weight: 600;">Address</span>
+                            <p style="margin: 0; color: #6c757d;"> Tigga Complex, Ranchi, Jharkhand-834002</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS for Styling and Animations -->
+    <style>
+        .underline {
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 60px;
+            height: 3px;
+            background-color: #FFC107;
+            animation: underline-slide 1.2s forwards;
+        }
+
+        @keyframes underline-slide {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 60px;
+            }
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            font-size: 1rem;
+            padding: 15px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #3D5EA3;
+            outline: none;
+            box-shadow: 0 0 10px rgba(61, 94, 163, 0.2);
+        }
+
+        .btn-custom {
+            background-color: #3D5EA3;
+            color: #ffffff;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #2c4375;
+            transform: translateY(-3px);
+        }
+
+        .contact-box {
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+
+
+
+
+
+
+
+
+    <!-- footer Section -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">About Us</h5>
+                    <p class="mb-4">We are dedicated to providing innovative solutions that help businesses grow and
+                        succeed
+                        in the digital age.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1Ahjp6QbWS/" class="social-icon bg-primary"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://Instagram.com/science_sarathi_official" class="social-icon bg-secondary"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@sciencesarathi?si=wkjqphDgyCOuXaRv"
+                            class="social-icon bg-danger"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/amarendra-kumar-000b24143?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            class="social-icon bg-primary"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/" class="footer-link">Home</a></li>
+                        <li class="mb-2"><a href="/about.html" class="footer-link">About</a></li>
+                        <li class="mb-2"><a href="/courses.html" class="footer-link">Services</a></li>
+                        <li class="mb-2"><a href="/contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="footer-link"></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Development</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Marketing</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Consulting</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Analytics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            1st floor,Tigga Complex, By pass Road, Alkapuri, Ranchi, Jharkhand-834002
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+1234567890" class="footer-link">+91 6294938013, 91+ 8757823159</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sciencesarathi1512@gmail.com"
+                                target="_blank" class="footer-link">
+                                sciencesarathi1512@gmail.com
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <hr class="mb-4">
+                    <div class="text-center">
+                        <p class="mb-0">&copy; 2023 Science Sarathi. All rights reserved.</p>
+                        <p>Made with ❤️ @hr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll Top -->
+    <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+
+
+    <!-- Bootstrap JS (Ensure you include Bootstrap JS and Popper.js) -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>

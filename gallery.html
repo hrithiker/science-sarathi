@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Sarathi Website</title>
+
+    <!-- Bootstrap 5 CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+
+    <!-- Font Awesome 5 CDN  -->
+    <link rel="icon" href="/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- 1st Navbar section -->
+
+    <header class="header container-fluid">
+        <div class="d-flex align-items-center">
+
+            <a href="index.html">
+                <img src="/images/logo science-sarathi.png" alt="Logo" class="logo">
+            </a>
+            <div class="ms-3">
+                <div class="brand-text">Science Sarathi</div>
+                <div class="subtext">A Robotics Innovation Lab</div>
+            </div>
+        </div>
+        <div class="hindi-text">साइंस सारथी</div>
+        <div class="right-logos d-flex">
+            <img src="/images/iso.jpeg" alt="ISO Logo">
+            <img src="/images/skilindia.fd5d47f7ad455afd20cb.png" alt="Skill India">
+            <img src="/images/pmlogo.bb65caecae5170f45820.png" alt="PM Initiative">
+            <img src="/images/msme-logo-png_seeklogo-480293.png" alt="MSME Logo">
+
+        </div>
+    </header>
+
+
+
+    <!-- 2nd Navbar Section -->
+    <header id="full_nav2">
+        <div class="header2">
+            <nav class=" navbar navbar-expand-lg">
+                <div class="container  ">
+                    <button aria-controls="navbarSupportedContent8" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-bs-target="#navbarSupportedContent8" data-bs-toggle="collapse"
+                        type="button"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent8">
+                        <ul class="navbar-nav mx-auto my-2 my-lg-0 ">
+                            <li class="nav-item d-flex align-items-center me-4">
+                                <a class="nav-link" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center me-4  ">
+                                <a class="nav-link" href="/about.html">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown d-flex align-items-center me-4">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Our Services
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li><a class="dropdown-item" href="/school.html">School</a></li>
+                                    <li><a class="dropdown-item" href="/college.html">College</a></li>
+                                    <!-- <li><a class="dropdown-item" href="#">Others </a></li> -->
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown  d-flex align-items-center me-4">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Lab Setup
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/images/404-error-page/404.html">Science Lab </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/images/404-error-page/404.html">Robotics lab
+                                        </a></li>
+                                    <li><a class="dropdown-item" href="/images/404-error-page/404.html">STEAM LAB</a>
+                                    </li>
+                                    <!-- <li><a class="dropdown-item" href="#">ATL</a></li> -->
+
+                                </ul>
+                            </li>
+                            <li class="nav-item  d-flex align-items-center me-4 ">
+                                <a class="nav-link" href="/gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center me-4 ">
+                                <a class="nav-link" href="/contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-3 mb-md-5">
+                <div class="col-lg-8 col-xxl-7">
+                    <span class="text-muted badge-custom">Showcase</span>
+                    <h2 class="display-5 fw-bold mb-3">Our Gallery</h2>
+                    <p class="lead fw-bold">Unveiling Innovation: A Glimpse into Our Journey</p>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row gy-4">
+                <!-- Cards Loop -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card"
+                        onclick="openPopup('/images/gallery/classes .jpg','Well Structured Classes')">
+                        <img class="img-fluid rounded" src="/images/gallery/classes .jpg" alt="School Image">
+                        <div class="card-description">Dynamic Classrooms </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card" onclick="openPopup('/images/gallery/workshop.jpg','Arts Integration')">
+                        <img class="img-fluid rounded" src="/images/gallery/workshop.jpg" alt="School Image">
+                        <div class="card-description">College Workshops</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card"
+                        onclick="openPopup('/images/gallery/science-workshop.jpg','Science Workshop')">
+                        <img class="img-fluid rounded" src="/images/gallery/science-workshop.jpg" alt="School Image">
+                        <div class="card-description">School Workshop</div> <!-- Added description -->
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card" onclick="openPopup('/images/gallery/img-2.jpg','Science Workshop-2')">
+                        <img class="img-fluid rounded" src="/images/gallery/img-2.jpg" alt="School Image">
+                        <div class="card-description">Seminars</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card" onclick="openPopup('/images/gallery/internship.jpg','Internships')">
+                        <img class="img-fluid rounded" src="/images/gallery/internship.jpg" alt="School Image">
+                        <div class="card-description">Internships</div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card" onclick="openPopup('/images/gallery/img-4.jpg','Arts Integration')">
+                        <img class="img-fluid rounded" src="/images/gallery/img-4.jpg" alt="School Image">
+                        <div class="card-description">Arts Integration</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card" onclick="openPopup('/images/gallery/img5.jpg','Creative Learning')">
+                        <img class="img-fluid rounded" src="/images/gallery/img5.jpg" alt="School Image">
+                        <div class="card-description">Creative Learning </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card" onclick="openPopup('/images/gallery/img9.jpg','College Internships')">
+                        <img class="img-fluid rounded" src="/images/gallery/img9.jpg" alt="School Image">
+                        <div class="card-description">College Internships </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card" onclick="openPopup('/images/gallery/img-7.jpg','Tech Studying')">
+                        <img class="img-fluid rounded" src="/images/gallery/img-7.jpg" alt="School Image">
+                        <div class="card-description">Tech Studying</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card" onclick="openPopup('/images/gallery/img-8.jpg','Hands-On Project')">
+                        <img class="img-fluid rounded" src="/images/gallery/img-8.jpg" alt="School Image">
+                        <div class="card-description">Hands-On Project </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card" onclick="openPopup('/images/gallery/img10.jpg','Tech Inovations')">
+                        <img class="img-fluid rounded" src="/images/gallery/img10.jpg" alt="School Image">
+                        <div class="card-description">Tech Inovations </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="gallery-card" onclick="openPopup('/images/gallery/project.jpg','Porjects Building')">
+                        <img class="img-fluid rounded" src="/images/gallery/project.jpg" alt="School Image">
+                        <div class="card-description">Projects Building </div>
+                    </div>
+                </div>
+
+
+            </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup()">✖</button>
+            <img id="popup-image" src="" alt="Expanded Image">
+            <div id="popup-text" class="popup-text"></div> <!-- Text below the image -->
+        </div>
+    </div>
+
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Container to align gallery cards */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        /* Gallery Card - Responsive & Scalable */
+        .gallery-card {
+            position: relative;
+            width: 100%;
+            max-width: 260px;
+            height: auto;
+            /* Adjusts to content */
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        /* Image inside gallery card */
+        .gallery-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Description inside the card */
+        .card-description {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 16px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .gallery-card:hover .card-description {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Popup Content */
+        .popup-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        /* Image in Popup */
+        .popup img {
+            max-width: 100%;
+            max-height: 80vh;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        /* Popup Text */
+        .popup-text {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Close Button */
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            background: red;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 50%;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .popup-close:hover {
+            background: darkred;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery-card {
+                max-width: 90%;
+            }
+
+            .popup-content {
+                max-width: 95%;
+                padding: 15px;
+            }
+
+            .popup-text {
+                font-size: 16px;
+            }
+
+            .popup-close {
+                font-size: 14px;
+                padding: 4px 8px;
+            }
+        }
+    </style>
+
+
+    <!-- footer Section -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">About Us</h5>
+                    <p class="mb-4">We are dedicated to providing innovative solutions that help businesses grow and
+                        succeed
+                        in the digital age.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1Ahjp6QbWS/" class="social-icon bg-primary"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://Instagram.com/science_sarathi_official" class="social-icon bg-secondary"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@sciencesarathi?si=wkjqphDgyCOuXaRv"
+                            class="social-icon bg-danger"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/amarendra-kumar-000b24143?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            class="social-icon bg-primary"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/" class="footer-link">Home</a></li>
+                        <li class="mb-2"><a href="/about.html" class="footer-link">About</a></li>
+                        <li class="mb-2"><a href="/courses.html" class="footer-link">Services</a></li>
+                        <li class="mb-2"><a href="/contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="footer-link"></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Development</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Marketing</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Consulting</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Analytics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            1st floor,Tigga Complex, By pass Road, Alkapuri, Ranchi, Jharkhand-834002
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+1234567890" class="footer-link">+91 6294938013, +91 8757823159</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sciencesarathi1512@gmail.com"
+                                target="_blank" class="footer-link">
+                                sciencesarathi1512@gmail.com
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <hr class="mb-4">
+                    <div class="text-center">
+                        <p class="mb-0">&copy; 2023 Science Sarathi. All rights reserved.</p>
+                        <p>Made with ❤️ @hr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Scroll Top -->
+    <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+
+
+
+
+
+    <!-- Bootstrap JS (Ensure you include Bootstrap JS and Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <!-- main js file src -->
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

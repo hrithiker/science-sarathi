@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Sarathi Website</title>
+
+    <!-- Bootstrap 5 CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome 5 CDN  -->
+    <link rel="icon" href="/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            background: url('/images/college/college1.jpeg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #0077ff;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-top: 10px;
+            color: #fff;
+            font-weight: 300;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 80px 15px;
+                min-height: 50vh;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #f0f4ff, #eaf3fc);
+            color: #212529;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 32px;
+            letter-spacing: 1px;
+            border-bottom: 3px solid #007bff;
+            display: inline-block;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .course-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+            background: #ffffff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: none;
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .course-card .card-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .course-card h5 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #34495e;
+        }
+
+        .course-card p {
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .course-points {
+            padding-left: 18px;
+            margin-bottom: 20px;
+        }
+
+        .course-points li {
+            color: #000000;
+            font-size: 16px;
+            margin-bottom: 6px;
+            list-style-type: circle;
+        }
+
+        .course-card .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-size: 15px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            font-weight: 600;
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        .course-card .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .course-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        /* for demo section */
+
+
+        .demo-section {
+            padding: 80px 20px;
+            background-color: #adc2f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin-bottom: 2em;
+        }
+
+        .demo-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .demo-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 15px;
+        }
+
+        .demo-text h2 span {
+            color: #ff5733;
+        }
+
+        .demo-text p {
+            font-size: 18px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .btn-book-demo {
+            background-color: transparent;
+            border: 2px solid #ff5733;
+            color: #ff5733;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-book-demo:hover {
+            background-color: #ff5733;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .demo-img img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 12px;
+        }
+
+        /* Modal Styling */
+        .modal-content {
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            background-color: #ffffff;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--bs-primary);
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ced4da;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #ff5733;
+            box-shadow: 0 0 6px rgba(255, 87, 51, 0.3);
+        }
+
+        .btn-submit {
+            background-color: #ff5733;
+            color: #fff;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #e74c3c;
+            transform: translateY(-2px);
+        }
+
+        :root {
+            --bs-primary: #ff4500;
+            /* Set primary color to Request Callback button color (Orange Red) */
+        }
+
+        .form-check-input:checked {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+
+        .form-check-label a {
+            color: var(--bs-primary);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .form-check-label a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1st Navbar section -->
+
+    <header class="header container-fluid">
+        <div class="d-flex align-items-center">
+
+            <a href="index.html">
+                <img src="/images/logo science-sarathi.png" alt="Logo" class="logo">
+            </a>
+            <div class="ms-3">
+                <div class="brand-text">Science Sarathi</div>
+                <div class="subtext">A Robotics Innovation Lab</div>
+            </div>
+        </div>
+        <div class="hindi-text">साइंस सारथी</div>
+        <div class="right-logos d-flex">
+            <img src="/images/iso.jpeg" alt="ISO Logo">
+            <img src="/images/skilindia.fd5d47f7ad455afd20cb.png" alt="Skill India">
+            <img src="/images/pmlogo.bb65caecae5170f45820.png" alt="PM Initiative">
+            <img src="/images/msme-logo-png_seeklogo-480293.png" alt="MSME Logo">
+
+        </div>
+    </header>
+
+
+    <!-- 2nd Navbar Section -->
+    <header id="full_nav2">
+        <div class="header2">
+            <nav class=" navbar navbar-expand-lg">
+                <div class="container  ">
+                    <button aria-controls="navbarSupportedContent8" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-bs-target="#navbarSupportedContent8" data-bs-toggle="collapse"
+                        type="button"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent8">
+                        <ul class="navbar-nav mx-auto my-2 my-lg-0 ">
+                            <li class="nav-item d-flex align-items-center me-4">
+                                <a class="nav-link" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center me-4  ">
+                                <a class="nav-link" href="/about.html">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown d-flex align-items-center me-4">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Courses
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li><a class="dropdown-item" href="/college.html">College </a></li>
+                                    <li><a class="dropdown-item" href="/school.html">School </a></li>
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown  d-flex align-items-center me-4">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Lab Setup
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/images/404-error-page/404.html">Science Lab </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/images/404-error-page/404.html">Robotics lab
+                                        </a></li>
+                                    <li><a class="dropdown-item" href="/images/404-error-page/404.html">STEAM LAB</a>
+                                    </li>
+                                    <!-- <li><a class="dropdown-item" href="#">ATL</a></li> -->
+
+                                </ul>
+                            </li>
+                            <li class="nav-item  d-flex align-items-center me-4 ">
+                                <a class="nav-link" href="/gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center me-4 ">
+                                <a class="nav-link" href="/contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </nav>
+        </div>
+    </header>
+
+
+    
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1>Welcome to Science Sarathi College!</h1>
+                <p>Unlock Your Potential – Learn, Innovate, and Lead the Future!</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Courses Section -->
+
+
+    <div class="container py-2">
+        <!-- BEGINNER SECTION -->
+        <h2 class="section-title mt-5">Courses for College</h2>
+        <div class="row justify-content-center">
+            <!-- Introduction to Coding -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="course-card border rounded shadow-sm">
+                    <img src="/images/college/workshop.webp" alt="Introduction to Coding" class="img-fluid rounded-top">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold">Workshop / Seminar </h5>
+                        <p>We provide Workshop/Seminar that will be a great experiance to you .</p>
+                        <ul class="course-points list-unstyled">
+                            <li> Industry-Relevant Topics </li>
+                            <li> Hands-on Learning</li>
+                            <li> Career Growth</li>
+                        </ul>
+                        <a class="btn btn-primary w-100">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Basic Robotics -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="course-card border rounded shadow-sm">
+                    <img src="/images/college/internship.webp" alt="Basic Robotics" class="img-fluid rounded-top">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold">Internship / Training </h5>
+                        <p>Gain real-world experience and boost your career with our industry-focused internship and
+                            training programs.</p>
+                        <ul class="course-points list-unstyled">
+                            <li> Hands-on training with expert mentors</li>
+                            <li> Real industry projects to enhance skills</li>
+                            <li> Certification to strengthen your resume</li>
+                        </ul>
+                        <a class="btn btn-primary w-100">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- IoT (Internet of Things) -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="course-card border rounded shadow-sm">
+                    <img src="/images/college/palcement.webp" alt="IoT" class="img-fluid rounded-top">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold">Placement </h5>
+                        <p>We ensure our students are career-ready with:</p>
+                        <ul class="course-points list-unstyled">
+                            <li>Job Placement Support</li>
+                            <li> Top Recruiter Tie-Ups</li>
+                            <li>Career Counseling and Guidance</li>
+                            <!-- <li>Networking Opportunities</li> -->
+                            <li>Industry-Ready Training </li>
+
+
+
+
+                        </ul>
+                        <a class="btn btn-primary w-100">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container pb-5 ">
+        <!-- BEGINNER SECTION -->
+        <h2 class="section-title mt-5">Internship Opportunities</h2>
+        <div class="row justify-content-center">
+            <!-- Introduction to Coding -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="course-card border rounded shadow-sm">
+                    <img src="/images/college/workshop.webp" alt="IoT Internship" class="img-fluid rounded-top">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold">IoT Internship</h5>
+                        <p>Gain real-world experience in the Internet of Things with hands-on projects, expert
+                            mentorship, and practical learning tailored to industry needs.</p>
+                        <ul class="course-points list-unstyled">
+                            <li> Industry-Relevant Projects</li>
+                            <li> Practical Skills & Hardware Training</li>
+                            <li> CLICK BUTTON TO JOIN<i class="fas fa-arrow-down"></i>
+                            </li>
+                        </ul>
+                        <a href="https://forms.gle/YtPfNwf541Y5YCQ7A"
+                            target="_blank" class="btn btn-primary w-100">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Basic Robotics -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="course-card border rounded shadow-sm">
+                    <img src="/images/college/workshop.webp" alt="Front-End Web Development Internship"
+                        class="img-fluid rounded-top">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold">Front-End Web Development Internship</h5>
+                        <p>Gain real-world experience in front-end development with our hands-on internship program
+                            designed to boost your skills and career prospects.</p>
+                        <ul class="course-points list-unstyled">
+                            <li> Industry-Relevant Tools & Frameworks</li>
+                            <li> Practical Projects & Mentorship</li>
+                            <li> CLICK BUTTON TO JOIN<i class="fas fa-arrow-down"></i>
+                            </li>
+                        </ul>
+                        <a href="https://forms.gle/YtPfNwf541Y5YCQ7A"
+                            target="_blank" class="btn btn-primary w-100">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+    <!-- book free demo -->
+
+    <!-- FREE DEMO SECTION -->
+    <section id="bookFreeDemoSection" class="bookFreeDemoSection">
+        <div class="container demo-section">
+            <div class="demo-content">
+                <!-- Left Text Section -->
+                <div class="demo-text">
+                    <h2>Book your <span>Free Demo</span> session</h2>
+                    <p>Get a free academic counselling session with our experts and take the first step toward success!
+                    </p>
+                    <button class="btn-book-demo" data-bs-toggle="modal" data-bs-target="#demoModal">
+                        Book Free Demo
+                    </button>
+                </div>
+
+                <!-- Right Image Section -->
+                <div class="demo-img">
+                    <img src="/images/demo.webp" alt="Free Demo">
+                </div>
+            </div>
+        </div>
+
+        <!-- POP-UP FORM MODAL -->
+        <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="demoModalLabel">Book Free Demo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body  old-->
+                    <div class="modal-body">
+
+                        <!-- Contact Form  New -->
+                        <form id="contactForm">
+                            <!-- Name Field -->
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+
+                            <!-- Father's Name Field -->
+                            <div class="mb-3">
+                                <label for="father_name" class="form-label">Father's Name</label>
+                                <input type="text" class="form-control" id="father_name" name="father_name" required>
+                            </div>
+
+                            <!-- School/College Field -->
+                            <div class="mb-3">
+                                <label for="school_name" class="form-label">School/College Name</label>
+                                <input type="text" class="form-control" id="school_name" name="school_name" required>
+                            </div>
+
+                            <!-- Phone Field -->
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+
+                            <!-- Gender Field -->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Gender</label>
+                                <div class="border rounded p-3 bg-light">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="male"
+                                            value="Male" required>
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="female"
+                                            value="Female" required>
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="other"
+                                            value="Other" required>
+                                        <label class="form-check-label" for="other">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    I accept the <a href="#" class="text-primary">Terms and Conditions</a>
+                                </label>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-submit w-100">Request a call back</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">About Us</h5>
+                    <p class="mb-4">We are dedicated to providing innovative solutions that help businesses grow and
+                        succeed
+                        in the digital age.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1Ahjp6QbWS/" class="social-icon bg-primary"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://Instagram.com/science_sarathi_official" class="social-icon bg-secondary"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@sciencesarathi?si=wkjqphDgyCOuXaRv"
+                            class="social-icon bg-danger"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/amarendra-kumar-000b24143?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            class="social-icon bg-primary"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/" class="footer-link">Home</a></li>
+                        <li class="mb-2"><a href="/about.html" class="footer-link">About</a></li>
+                        <li class="mb-2"><a href="/courses.html" class="footer-link">Services</a></li>
+                        <li class="mb-2"><a href="/contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="footer-link"></a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Development</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Marketing</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Consulting</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Analytics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            1st floor,Tigga Complex, By pass Road, Alkapuri, Ranchi, Jharkhand-834002
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+1234567890" class="footer-link">+91 629493801, 91+ 8757823159</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sciencesarathi1512@gmail.com"
+                                target="_blank" class="footer-link">
+                                sciencesarathi1512@gmail.com
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <hr class="mb-4">
+                    <div class="text-center">
+                        <p class="mb-0">&copy; 2023 Science Sarathi. All rights reserved.</p>
+                        <p>Made with ❤️ @hr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+
+
+    <!-- Bootstrap JS (Ensure you include Bootstrap JS and Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
