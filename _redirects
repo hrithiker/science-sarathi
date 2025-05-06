@@ -1,0 +1,5 @@
+# Redirect /workshop to homepage
+/workshop    /    301
+
+# Redirect all 404 (not found) pages to homepage
+/*           /    404
