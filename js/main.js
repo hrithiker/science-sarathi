@@ -149,14 +149,23 @@ document.addEventListener("DOMContentLoaded", function () {
 //     myModal.show();
 //   });
 
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Check if the modal has already been shown
+//     if (!localStorage.getItem('modalShown')) {
+//         var myModal = new bootstrap.Modal(document.getElementById('internshipModal'));
+//         myModal.show();
+
+//         // Set flag in localStorage to prevent the modal from showing again
+//         localStorage.setItem('modalShown', 'true');
+//     }
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Check if the modal has already been shown
-    if (!localStorage.getItem('modalShown')) {
+     // Check if the session is stored in sessionStorage
+    if (!sessionStorage.getItem('modalShown')) {
         var myModal = new bootstrap.Modal(document.getElementById('internshipModal'));
         myModal.show();
-
-        // Set flag in localStorage to prevent the modal from showing again
-        localStorage.setItem('modalShown', 'true');
+         // Set flag in localStorage to prevent the modal from showing again
+        sessionStorage.setItem('modalShown', 'true');
     }
 });
-
